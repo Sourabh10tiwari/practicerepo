@@ -8,12 +8,12 @@ pipeline {
         sh 'node --version'
       }
     }
-  }
   stage('execute ansible code') {
     steps {
         dir("../../prechecks-demo") {
             sh 'ansible-playbook prechecks.yml'
         }
      }
+   }
   }  
 }
